@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            //Make the projectile fire
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
         //Keep the player in bounds
         if (transform.position.x < -xRange)
         {
